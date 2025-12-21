@@ -33,7 +33,7 @@
     </div>
   </header>
 
-  <main class="page-content" aria-label="Content">
+  <main class="page-content{% if page.layout == 'home' %} home-content{% endif %}" aria-label="Content">
     {{ content }}
   </main>
 

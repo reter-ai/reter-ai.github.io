@@ -63,10 +63,11 @@ body {
   padding: 0 !important;
 }
 
-.home .page-content,
-.home.page-content {
+/* Home page content - full width */
+.home-content {
   padding: 0 !important;
   max-width: none !important;
+  width: 100% !important;
 }
 
 /* Main page-content - full width for home */
@@ -723,12 +724,19 @@ main.page-content {
   animation: float 6s ease-in-out infinite;
 }
 
-/* Page Layout Styles */
-.page-content {
+/* Page Layout Styles - Only for non-home pages */
+.page-content:not(.home-content) {
   max-width: 900px;
   margin: 0 auto;
   padding: 3rem 4rem !important;
   background: var(--bg-dark);
+}
+
+/* Home page should be full width - reinforced */
+main.home-content {
+  max-width: none !important;
+  padding: 0 !important;
+  width: 100% !important;
 }
 
 .page-header {
