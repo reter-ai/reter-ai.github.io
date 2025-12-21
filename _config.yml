@@ -1,0 +1,46 @@
+# Site settings
+title: Codeine
+description: "AI-Powered Code Reasoning MCP Server - Semantic analysis, refactoring detection, and intelligent code understanding"
+baseurl: ""
+url: "https://codeine.ai"
+
+# Build settings
+markdown: kramdown
+theme: minima
+permalink: pretty
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "doc"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Navigation
+header_pages:
+  - index.md
+  - _docs/getting-started.md
+  - _docs/features.md
+  - _docs/examples.md
+  - about.md
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
