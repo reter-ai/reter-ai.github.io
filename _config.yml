@@ -1,6 +1,6 @@
 # Site settings
 title: Codeine
-description: "AI-Powered Code Reasoning MCP Server - Semantic analysis, refactoring detection, and intelligent code understanding"
+description: "AI-powered code reasoning MCP server for Claude Code"
 baseurl: ""
 url: "https://codeine.ai"
 

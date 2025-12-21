@@ -5,70 +5,69 @@ title: Getting Started
 
 # Installation
 
-Codeine is an MCP (Model Context Protocol) server that integrates with Claude Code to provide semantic code analysis and reasoning capabilities.
+Codeine is an MCP server that integrates with Claude Code to provide code reasoning capabilities.
 
 ## Prerequisites
 
 - Python 3.10 or higher
-- Claude Code (Claude Desktop with CLI)
-- Git
+- Claude Code (CLI or Desktop)
+- uv/uvx package manager
 
 ## Quick Install
 
-### Windows
+### Step 1: Pre-cache dependencies
+
+Run from your project directory to download dependencies (~400MB, cached for future runs):
 
 ```bash
-git clone https://github.com/codeine-ai/codeine
-cd codeine
-install.bat
+uvx --from git+https://github.com/codeine-ai/codeine --find-links https://raw.githubusercontent.com/codeine-ai/reter/main/reter_core/index.html codeine
 ```
 
-### Linux/macOS
+This will:
+1. Download dependencies (cached for future runs)
+2. Sync your project files to the RETER index
+3. Exit automatically
+
+### Step 2: Add to Claude Code
 
 ```bash
-git clone https://github.com/codeine-ai/codeine
-cd codeine
-pip install -e .
+claude mcp add codeine -s user -e ANTHROPIC_API_KEY=your-api-key -- uvx --from git+https://github.com/codeine-ai/codeine --find-links https://raw.githubusercontent.com/codeine-ai/reter/main/reter_core/index.html codeine
 ```
 
-## Configure Claude Code
+Now Claude starts fast because everything is cached.
 
-Add Codeine to your Claude Code MCP configuration:
+## Configure with Claude Desktop
 
-**Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
-**macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+**Config file location:**
+- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+- **Linux**: `~/.config/Claude/claude_desktop_config.json`
 
 ```json
 {
   "mcpServers": {
     "codeine": {
-      "command": "python",
-      "args": ["-m", "codeine"],
+      "command": "uvx",
+      "args": [
+        "--from", "git+https://github.com/codeine-ai/codeine",
+        "--find-links", "https://raw.githubusercontent.com/codeine-ai/reter/main/reter_core/index.html",
+        "codeine"
+      ],
       "env": {
-        "RETER_PROJECT_ROOT": "C:/path/to/your/project"
-      }
+        "ANTHROPIC_API_KEY": "your-api-key"
+      },
+      "timeout": 120000
     }
   }
 }
 ```
 
-## Verify Installation
-
-After restarting Claude Code, you should see Codeine's tools available:
-
-```
-Use code_inspection to analyze your codebase architecture
-```
-
-Claude will respond with information about your project structure.
-
 ## Environment Variables
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `RETER_PROJECT_ROOT` | Root directory of your project | Current directory |
-| `RETER_EXCLUDE_PATTERNS` | Glob patterns to exclude | `test_*,*_test.py` |
-| `RETER_MCP_LOG_LEVEL` | Log level (DEBUG, INFO, etc.) | INFO |
+| `RETER_PROJECT_ROOT` | Path to project for auto-loading code | Auto-detected from CWD |
+| `ANTHROPIC_API_KEY` | API key for sampling handler | - |
 
 ## Next Steps
 

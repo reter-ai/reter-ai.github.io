@@ -3,161 +3,133 @@ layout: doc
 title: Features
 ---
 
-# Features
+# Tools
 
-Codeine provides a comprehensive set of tools for code analysis, refactoring detection, and semantic reasoning.
+Codeine provides MCP tools for code reasoning and analysis.
 
-## Code Inspection
-
-Analyze code structure and relationships with the `code_inspection` tool.
-
-### Available Actions
-
-| Action | Description |
-|--------|-------------|
-| `list_modules` | List all modules in the codebase |
-| `list_classes` | List all classes, optionally filtered by module |
-| `describe_class` | Get detailed class info with methods and attributes |
-| `get_class_hierarchy` | Get inheritance hierarchy |
-| `find_usages` | Find where a class/method/function is used |
-| `find_callers` | Find all callers of a function (recursive) |
-| `find_callees` | Find all functions called by a target |
-| `analyze_dependencies` | Analyze module dependency graph |
-| `get_complexity` | Calculate complexity metrics |
-| `get_architecture` | Generate architectural overview |
-
-### Example
-
-```javascript
-await code_inspection({
-  action: "describe_class",
-  target: "MyClass",
-  include_methods: true
-})
-```
-
-## Refactoring Detection
-
-The `recommender` tool detects refactoring opportunities based on Martin Fowler's patterns.
-
-### Available Detectors (70+)
-
-**Code Smells:**
-- `find_large_classes` - God classes with too many methods
-- `find_long_parameter_lists` - Functions with too many parameters
-- `detect_feature_envy` - Methods using other classes' data
-- `find_shotgun_surgery` - Changes affecting many files
-- `find_circular_imports` - Circular dependency detection
-
-**Refactoring Opportunities:**
-- `find_extract_function_opportunities`
-- `find_extract_class_opportunities`
-- `find_move_function_opportunities`
-- `find_duplicate_code`
-
-### Example
-
-```javascript
-await recommender({
-  recommender_type: "refactoring",
-  detector_name: "find_large_classes",
-  params: { threshold: 20 }
-})
-```
-
-## Semantic Search (RAG)
-
-FAISS-powered vector search for finding code by natural language description.
-
-### Tools
+## Thinking & Reasoning
 
 | Tool | Description |
 |------|-------------|
-| `semantic_search` | Search code by natural language query |
-| `rag_status` | Check RAG index status |
-| `rag_reindex` | Rebuild the semantic index |
-| `find_similar_clusters` | Find similar code patterns |
+| `thinking` | Record reasoning steps, analysis, decisions |
+| `session` | Manage reasoning sessions (start, context, end) |
+| `items` | Query and manage thoughts, requirements, tasks |
+| `project` | Project analytics (health, critical path, impact) |
 
-### Example
+### thinking
 
-```javascript
-await semantic_search({
-  query: "user authentication and login",
-  limit: 10
-})
-```
-
-## UML Diagrams
-
-Generate visual diagrams in Mermaid format.
-
-### Diagram Types
-
-| Type | Description |
-|------|-------------|
-| `class_hierarchy` | Inheritance tree diagram |
-| `class_diagram` | Class with methods and relationships |
-| `sequence` | Method call sequence diagram |
-| `dependencies` | Module dependency graph |
-| `gantt` | Project schedule (from tasks) |
-
-### Example
-
-```javascript
-await diagram({
-  diagram_type: "class_hierarchy",
-  target: "BaseClass",
-  format: "mermaid"
-})
-```
-
-## Thinking Tool
-
-Structured reasoning with traceability.
-
-### Features
-
-- Step-by-step thought chains
-- Create requirements, tasks, decisions
-- Link items with traces and dependencies
-- Generate Gantt charts from tasks
-
-### Example
+Record structured reasoning steps with thought chains.
 
 ```javascript
 await thinking({
   thought: "Analyzing the authentication module",
   thought_number: 1,
-  total_thoughts: 5,
-  thought_type: "analysis",
-  operations: {
-    task: {
-      name: "Review auth flow",
-      priority: "high"
-    }
-  }
+  total_thoughts: 3,
+  thought_type: "analysis"
 })
 ```
 
-## Multi-Language Support
+### session
 
-Codeine supports 7 programming languages:
+Manage reasoning sessions with persistence.
 
-| Language | Extensions | Features |
-|----------|------------|----------|
-| Python | `.py` | Full analysis, refactoring |
-| JavaScript | `.js`, `.ts`, `.tsx` | Classes, functions, modules |
-| C# | `.cs` | Classes, interfaces, namespaces |
-| C++ | `.cpp`, `.hpp`, `.h` | Classes, templates, namespaces |
-| Go | `.go` | Structs, interfaces, packages |
-| Rust | `.rs` | Structs, traits, modules |
-| HTML | `.html`, `.htm` | DOM structure, scripts |
+```javascript
+// Start a new session
+await session({ action: "start", goal: "Refactor auth module" })
 
-Use the `language` parameter to filter analysis:
+// Get current context
+await session({ action: "context" })
+
+// End session
+await session({ action: "end" })
+```
+
+## Code Analysis
+
+| Tool | Description |
+|------|-------------|
+| `code_inspection` | Python code analysis (26 actions) |
+| `recommender` | Refactoring and test coverage recommendations |
+| `diagram` | Generate UML diagrams (class, sequence, etc.) |
+
+### code_inspection
+
+Analyze code structure with 26 available actions:
+
+- `list_modules` - List all modules
+- `list_classes` - List all classes
+- `describe_class` - Get detailed class info
+- `get_class_hierarchy` - Inheritance hierarchy
+- `find_usages` - Find where code is used
+- `find_callers` - Find all callers
+- `find_callees` - Find all callees
+- `analyze_dependencies` - Module dependencies
+- `get_complexity` - Complexity metrics
+- `get_architecture` - Architecture overview
 
 ```javascript
 await code_inspection({
-  action: "list_classes",
-  language: "python"  // or "javascript", "csharp", etc.
+  action: "list_classes"
+})
+
+await code_inspection({
+  action: "describe_class",
+  target: "MyClass"
 })
 ```
+
+### recommender
+
+Get refactoring and test coverage recommendations.
+
+```javascript
+await recommender({
+  recommender_type: "refactoring"
+})
+
+await recommender({
+  recommender_type: "test_coverage"
+})
+```
+
+### diagram
+
+Generate UML diagrams in Mermaid format.
+
+**Diagram types:**
+- `class_hierarchy` - Inheritance tree
+- `class_diagram` - Class with methods
+- `sequence` - Method call sequence
+- `dependencies` - Module dependencies
+
+```javascript
+await diagram({
+  diagram_type: "class_hierarchy",
+  target: "BaseClass"
+})
+```
+
+## Instance Management
+
+| Tool | Description |
+|------|-------------|
+| `instance_manager` | Manage RETER instances and sources |
+
+### instance_manager
+
+Manage multiple RETER instances for different projects.
+
+```javascript
+await instance_manager({
+  action: "list"
+})
+```
+
+## Supported Languages
+
+| Language | Extensions |
+|----------|------------|
+| Python | `.py` |
+| C# | `.cs` |
+| C++ | `.cpp`, `.hpp`, `.h`, `.cc` |
+| JavaScript | `.js` |

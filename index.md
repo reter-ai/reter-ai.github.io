@@ -4,19 +4,19 @@ title: Home
 ---
 
 <div class="announcement-bar">
-  <p>AI-Powered Code Reasoning MCP Server for Claude Code</p>
+  <p>MCP Server for Claude Code</p>
 </div>
 
 <div class="hero-modern">
   <div class="hero-content-modern">
-    <div class="badge">RETER Engine | MCP Protocol | Multi-Language Support</div>
+    <div class="badge">MCP Protocol | RETER Engine | Multi-Language</div>
     <h1 class="hero-title-modern">
       <span class="gradient-text">Codeine</span><br>
-      <span class="gradient-text-alt">Code Intelligence</span>
+      <span class="gradient-text-alt">MCP Server</span>
     </h1>
     <p class="hero-subtitle-modern">
-      MCP server for Claude Code that provides semantic code analysis, refactoring detection,
-      RAG-powered search, and intelligent reasoning. Supports Python, JavaScript, C#, C++, Go, Rust, and HTML.
+      AI-powered code reasoning MCP server. Logical reasoning with RETER engine,
+      multi-language code analysis, and session-based thinking with persistence.
     </p>
     <div class="hero-buttons-modern">
       <a href="/docs/getting-started" class="btn-modern btn-primary-modern">Get Started</a>
@@ -28,7 +28,7 @@ title: Home
       </a>
     </div>
     <div class="social-proof">
-      <p>7 Languages | 70+ Refactoring Detectors | RAG Semantic Search | UML Diagrams</p>
+      <p>Code Analysis | Reasoning Sessions | UML Diagrams | Refactoring</p>
     </div>
   </div>
   <div class="hero-visual">
@@ -38,22 +38,20 @@ title: Home
         <span class="code-dot"></span>
         <span class="code-dot"></span>
       </div>
-      <pre><code><span class="code-comment"># Analyze architecture with Codeine</span>
-<span class="code-keyword">await</span> <span class="code-function">code_inspection</span>({
-  action: <span class="code-string">"get_architecture"</span>,
-  format: <span class="code-string">"mermaid"</span>
-})
+      <pre><code><span class="code-comment">$</span> <span class="code-keyword">claude</span>
+<span class="code-comment">&gt;</span> Analyze the project architecture
 
-<span class="code-comment"># Find refactoring opportunities</span>
-<span class="code-keyword">await</span> <span class="code-function">recommender</span>({
-  recommender_type: <span class="code-string">"refactoring"</span>,
-  detector_name: <span class="code-string">"find_large_classes"</span>
-})
+<span class="code-function">● codeine:code_inspection</span> <span class="code-string">action="get_architecture"</span>
+  4 modules, 12 classes, 87 methods
 
-<span class="code-comment"># Semantic RAG search</span>
-<span class="code-keyword">await</span> <span class="code-function">semantic_search</span>({
-  query: <span class="code-string">"authentication logic"</span>
-})</code></pre>
+  Entry points: main.py, api/router.py
+  Core: AuthService, UserManager
+  Hub classes: BaseController (5 subclasses)
+
+<span class="code-comment">&gt;</span> Generate class diagram
+
+<span class="code-function">● codeine:diagram</span> <span class="code-string">type="class_hierarchy"</span>
+  ✓ Mermaid diagram generated</code></pre>
     </div>
   </div>
 </div>
@@ -61,110 +59,89 @@ title: Home
 <div class="stats-section">
   <div class="stat-item">
     <div class="stat-number">7</div>
+    <div class="stat-label">MCP Tools</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">4</div>
     <div class="stat-label">Languages</div>
   </div>
   <div class="stat-item">
-    <div class="stat-number">70+</div>
-    <div class="stat-label">Refactoring Detectors</div>
+    <div class="stat-number">26</div>
+    <div class="stat-label">Code Actions</div>
   </div>
   <div class="stat-item">
-    <div class="stat-number">699</div>
-    <div class="stat-label">Classes Analyzed</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-number">4907</div>
-    <div class="stat-label">Functions Indexed</div>
+    <div class="stat-number">UML</div>
+    <div class="stat-label">Diagrams</div>
   </div>
 </div>
 
 <div class="section-dark">
   <div class="section-header">
-    <span class="section-badge">Core Capabilities</span>
-    <h2>Intelligent Code<br><span class="gradient-text">Understanding</span></h2>
+    <span class="section-badge">MCP Tools</span>
+    <h2>What Claude Code<br><span class="gradient-text">Can Do</span></h2>
   </div>
 
   <div class="features-grid-modern">
     <div class="feature-card-modern">
+      <div class="feature-icon">💭</div>
+      <h3>thinking</h3>
+      <p>Record reasoning steps, analysis, and decisions with structured thought chains.</p>
+    </div>
+
+    <div class="feature-card-modern">
+      <div class="feature-icon">📋</div>
+      <h3>session</h3>
+      <p>Manage reasoning sessions - start, get context, and end with persistence.</p>
+    </div>
+
+    <div class="feature-card-modern">
       <div class="feature-icon">🔍</div>
-      <h3>Semantic Code Analysis</h3>
-      <p>Deep understanding of code structure using RETER reasoning engine. Extracts classes, functions, inheritance, call graphs, and dependencies.</p>
-      <div class="feature-highlight">
-        <code>code_inspection • describe_class • find_callers</code>
-      </div>
+      <h3>code_inspection</h3>
+      <p>Code analysis with 26 actions - list classes, find callers, analyze dependencies.</p>
     </div>
 
     <div class="feature-card-modern">
       <div class="feature-icon">🛠️</div>
-      <h3>Refactoring Detection</h3>
-      <p>70+ detectors based on Martin Fowler's patterns. Find God classes, feature envy, shotgun surgery, circular imports, and more.</p>
-      <div class="feature-highlight">
-        <code>recommender • find_large_classes • detect_feature_envy</code>
-      </div>
-    </div>
-
-    <div class="feature-card-modern">
-      <div class="feature-icon">🧠</div>
-      <h3>RAG Semantic Search</h3>
-      <p>FAISS-powered vector embeddings for natural language code search. Find relevant code by describing what you need.</p>
-      <div class="feature-highlight">
-        <code>semantic_search • rag_reindex • find_similar</code>
-      </div>
+      <h3>recommender</h3>
+      <p>Refactoring recommendations and test coverage analysis.</p>
     </div>
 
     <div class="feature-card-modern">
       <div class="feature-icon">📊</div>
-      <h3>UML Diagrams</h3>
-      <p>Generate class hierarchies, class diagrams with relationships, sequence diagrams, and dependency graphs in Mermaid format.</p>
-      <div class="feature-highlight">
-        <code>diagram • class_hierarchy • sequence • dependencies</code>
-      </div>
+      <h3>diagram</h3>
+      <p>Generate UML diagrams - class hierarchy, sequence, dependencies.</p>
     </div>
 
     <div class="feature-card-modern">
-      <div class="feature-icon">💭</div>
-      <h3>Structured Reasoning</h3>
-      <p>Thinking tool for step-by-step analysis. Create requirements, tasks, decisions with traceability. Gantt charts for project planning.</p>
-      <div class="feature-highlight">
-        <code>thinking • items • project • traceability</code>
-      </div>
-    </div>
-
-    <div class="feature-card-modern">
-      <div class="feature-icon">🌐</div>
-      <h3>Multi-Language Support</h3>
-      <p>Analyze Python, JavaScript/TypeScript, C#, C++, Go, Rust, and HTML. Language-specific and cross-language queries.</p>
-      <div class="feature-highlight">
-        <code>python • javascript • csharp • cpp • go • rust</code>
-      </div>
+      <div class="feature-icon">📦</div>
+      <h3>instance_manager</h3>
+      <p>Manage RETER instances and sources for multi-project analysis.</p>
     </div>
   </div>
 </div>
 
 <div class="section-light">
   <div class="section-header">
-    <span class="section-badge">Architecture</span>
-    <h2>How Codeine Works</h2>
-    <p style="color: var(--text-secondary); font-size: 1.125rem; max-width: 700px; margin: 1rem auto 0;">
-      Three-layer architecture combining MCP server, Python reasoning wrapper, and C++ RETER engine for maximum performance.
-    </p>
+    <span class="section-badge">Features</span>
+    <h2>What You Get</h2>
   </div>
 
   <div class="tech-grid">
     <div class="tech-item">
-      <h4>MCP Server Layer</h4>
-      <p>Claude Code integration with tools, resources, and prompts. Session management and instance coordination.</p>
+      <h4>Logical Reasoning</h4>
+      <p>RETER engine for semantic code understanding and pattern matching.</p>
     </div>
     <div class="tech-item">
-      <h4>RETER Python Wrapper</h4>
-      <p>High-level API for reasoning, queries, and code analysis. Manages knowledge graphs and inference rules.</p>
+      <h4>Multi-Language</h4>
+      <p>Python, C#, C++, and JavaScript code analysis.</p>
     </div>
     <div class="tech-item">
-      <h4>RETER C++ Core</h4>
-      <p>RETE algorithm implementation for fast pattern matching. OWL 2 RL and SWRL rule execution.</p>
+      <h4>Session Persistence</h4>
+      <p>Requirements and task tracking across reasoning sessions.</p>
     </div>
     <div class="tech-item">
-      <h4>ANTLR4 Parsers</h4>
-      <p>Language-specific parsing for Python, JavaScript, C#, C++, Go, Rust, and HTML.</p>
+      <h4>UML Diagrams</h4>
+      <p>Class hierarchy, sequence, and dependency diagrams.</p>
     </div>
   </div>
 </div>
@@ -177,20 +154,20 @@ title: Home
 
   <div class="tech-grid">
     <div class="tech-item">
-      <h4>1. Clone Repository</h4>
-      <p>git clone https://github.com/codeine-ai/codeine</p>
+      <h4>1. Pre-cache Dependencies</h4>
+      <p>Run uvx command from your project directory to download and sync.</p>
     </div>
     <div class="tech-item">
-      <h4>2. Install Dependencies</h4>
-      <p>pip install -e . (or use install.bat on Windows)</p>
+      <h4>2. Add to Claude Code</h4>
+      <p>claude mcp add codeine -s user -- uvx ...</p>
     </div>
     <div class="tech-item">
-      <h4>3. Configure Claude Code</h4>
-      <p>Add MCP server to claude_desktop_config.json</p>
+      <h4>3. Start Claude</h4>
+      <p>Everything is cached, Claude starts fast.</p>
     </div>
     <div class="tech-item">
-      <h4>4. Start Analyzing</h4>
-      <p>Use code_inspection, recommender, and thinking tools</p>
+      <h4>4. Use Tools</h4>
+      <p>thinking, code_inspection, recommender, diagram</p>
     </div>
   </div>
 </div>
@@ -203,33 +180,33 @@ title: Home
 
   <div class="use-cases-grid">
     <div class="use-case-card">
-      <div class="use-case-label">CODE QUALITY</div>
-      <h3>Refactoring Guidance</h3>
-      <p>Detect code smells, find refactoring opportunities, and get step-by-step guidance based on Martin Fowler's patterns.</p>
+      <div class="use-case-label">REASONING</div>
+      <h3>Structured Thinking</h3>
+      <p>Session-based reasoning with persistence. Track thoughts, requirements, and tasks across conversations.</p>
       <a href="/docs/features" class="use-case-link">Learn More →</a>
     </div>
 
     <div class="use-case-card">
-      <div class="use-case-label">ARCHITECTURE</div>
-      <h3>Codebase Understanding</h3>
-      <p>Visualize class hierarchies, dependency graphs, and module structure. Understand complex codebases quickly.</p>
+      <div class="use-case-label">ANALYSIS</div>
+      <h3>Code Understanding</h3>
+      <p>Multi-language code analysis. List classes, find callers, analyze dependencies across your codebase.</p>
       <a href="/docs/features" class="use-case-link">Learn More →</a>
     </div>
 
     <div class="use-case-card">
-      <div class="use-case-label">SEARCH</div>
-      <h3>Semantic Code Search</h3>
-      <p>Find code by describing what you need in natural language. RAG-powered search across your entire codebase.</p>
+      <div class="use-case-label">QUALITY</div>
+      <h3>Refactoring & Tests</h3>
+      <p>Get recommendations for refactoring opportunities and test coverage improvements.</p>
       <a href="/docs/features" class="use-case-link">Learn More →</a>
     </div>
   </div>
 </div>
 
 <div class="cta-modern">
-  <h2>Make your AI assistant<br>understand your code.</h2>
-  <p>Install Codeine and give Claude Code deep insight into your codebase.</p>
+  <h2>Add code intelligence<br>to Claude Code.</h2>
+  <p>Install the Codeine MCP server and unlock semantic code analysis.</p>
   <div class="cta-buttons">
     <a href="/docs/getting-started" class="btn-modern btn-primary-modern btn-large">Get Started</a>
-    <a href="/docs/features" class="btn-modern btn-secondary-modern btn-large">View Features</a>
+    <a href="https://github.com/codeine-ai/codeine" class="btn-modern btn-secondary-modern btn-large">View on GitHub</a>
   </div>
 </div>
