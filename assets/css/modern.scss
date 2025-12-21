@@ -92,8 +92,6 @@ main.page-content {
   background: linear-gradient(90deg, var(--primary-blue), var(--accent-purple));
   text-align: center;
   padding: 0.75rem 1rem;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
 }
 
 .announcement-bar p {
@@ -323,17 +321,11 @@ main.page-content {
 .section-dark {
   background: var(--bg-dark-alt);
   padding: 6rem 0;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  overflow-x: hidden;
 }
 
 .section-light {
   background: var(--bg-dark);
   padding: 6rem 0;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  overflow-x: hidden;
 }
 
 .section-header {
@@ -525,8 +517,6 @@ main.page-content {
   background: linear-gradient(135deg, var(--bg-dark-alt), #f0f4ff);
   position: relative;
   overflow: hidden;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
 }
 
 .cta-modern > * {
@@ -693,14 +683,6 @@ main.page-content {
   .cta-modern { padding: 3rem 1.5rem; }
   .cta-modern h2 { font-size: 2rem; }
 
-  /* Reset full-width sections on mobile */
-  .section-dark,
-  .section-light,
-  .announcement-bar,
-  .cta-modern {
-    width: 100%;
-    margin-left: 0;
-  }
 }
 
 @media (max-width: 640px) {
