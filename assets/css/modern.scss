@@ -274,7 +274,18 @@ body {
   padding: 1.5rem;
 }
 
-.feature-icon { font-size: 2rem; margin-bottom: 1rem; }
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.feature-icon i {
+  background: linear-gradient(135deg, var(--primary), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 .feature-card-modern h3 {
   color: var(--text-dark);

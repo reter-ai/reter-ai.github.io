@@ -83,37 +83,37 @@ title: Home
 
   <div class="features-grid-modern">
     <div class="feature-card-modern">
-      <div class="feature-icon">💭</div>
+      <div class="feature-icon"><i class="fa-solid fa-brain"></i></div>
       <h3>thinking</h3>
       <p>Record reasoning steps, analysis, and decisions with structured thought chains.</p>
     </div>
 
     <div class="feature-card-modern">
-      <div class="feature-icon">📋</div>
+      <div class="feature-icon"><i class="fa-solid fa-clipboard-list"></i></div>
       <h3>session</h3>
       <p>Manage reasoning sessions - start, get context, and end with persistence.</p>
     </div>
 
     <div class="feature-card-modern">
-      <div class="feature-icon">🔍</div>
+      <div class="feature-icon"><i class="fa-solid fa-magnifying-glass-code"></i></div>
       <h3>code_inspection</h3>
       <p>Code analysis with 26 actions - list classes, find callers, analyze dependencies.</p>
     </div>
 
     <div class="feature-card-modern">
-      <div class="feature-icon">🛠️</div>
+      <div class="feature-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
       <h3>recommender</h3>
       <p>Refactoring recommendations and test coverage analysis.</p>
     </div>
 
     <div class="feature-card-modern">
-      <div class="feature-icon">📊</div>
+      <div class="feature-icon"><i class="fa-solid fa-diagram-project"></i></div>
       <h3>diagram</h3>
       <p>Generate UML diagrams - class hierarchy, sequence, dependencies.</p>
     </div>
 
     <div class="feature-card-modern">
-      <div class="feature-icon">📦</div>
+      <div class="feature-icon"><i class="fa-solid fa-cubes"></i></div>
       <h3>instance_manager</h3>
       <p>Manage RETER instances and sources for multi-project analysis.</p>
     </div>
