@@ -5,7 +5,7 @@ title: Examples
 
 # Examples
 
-Real-world examples of using Codeine for code reasoning and analysis.
+Real-world examples of using Reter Code for code reasoning and analysis.
 
 ## Starting a Reasoning Session
 

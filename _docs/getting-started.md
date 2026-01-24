@@ -5,7 +5,7 @@ title: Getting Started
 
 # Installation
 
-Codeine is an MCP server that integrates with Claude Code to provide code reasoning capabilities.
+Reter Code is an MCP server that integrates with Claude Code to provide code reasoning capabilities.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ Codeine is an MCP server that integrates with Claude Code to provide code reason
 Run from your project directory to download dependencies (~400MB, cached for future runs):
 
 ```bash
-uvx --from git+https://github.com/codeine-ai/codeine --find-links https://raw.githubusercontent.com/codeine-ai/reter/main/reter_core/index.html codeine
+uvx --from git+https://github.com/reter_code-ai/reter_code --find-links https://raw.githubusercontent.com/reter_code-ai/reter/main/reter_core/index.html reter_code
 ```
 
 This will:
@@ -31,7 +31,7 @@ This will:
 ### Step 2: Add to Claude Code
 
 ```bash
-claude mcp add codeine -s user -e ANTHROPIC_API_KEY=your-api-key -- uvx --from git+https://github.com/codeine-ai/codeine --find-links https://raw.githubusercontent.com/codeine-ai/reter/main/reter_core/index.html codeine
+claude mcp add reter_code -s user -e ANTHROPIC_API_KEY=your-api-key -- uvx --from git+https://github.com/reter_code-ai/reter_code --find-links https://raw.githubusercontent.com/reter_code-ai/reter/main/reter_core/index.html reter_code
 ```
 
 Now Claude starts fast because everything is cached.
@@ -46,12 +46,12 @@ Now Claude starts fast because everything is cached.
 ```json
 {
   "mcpServers": {
-    "codeine": {
+    "reter_code": {
       "command": "uvx",
       "args": [
-        "--from", "git+https://github.com/codeine-ai/codeine",
-        "--find-links", "https://raw.githubusercontent.com/codeine-ai/reter/main/reter_core/index.html",
-        "codeine"
+        "--from", "git+https://github.com/reter_code-ai/reter_code",
+        "--find-links", "https://raw.githubusercontent.com/reter_code-ai/reter/main/reter_core/index.html",
+        "reter_code"
       ],
       "env": {
         "ANTHROPIC_API_KEY": "your-api-key"
@@ -72,4 +72,4 @@ Now Claude starts fast because everything is cached.
 ## Next Steps
 
 - [Features](/docs/features) - Learn about all available tools
-- [Examples](/docs/examples) - See Codeine in action
+- [Examples](/docs/examples) - See Reter Code in action
