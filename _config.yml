@@ -1,8 +1,8 @@
 # Site settings
-title: Codeine
+title: Reter Code
 description: "AI-powered code reasoning MCP server for Claude Code"
 baseurl: ""
-url: "https://codeine.ai"
+url: "https://reter_code.ai"
 
 # Build settings
 markdown: kramdown

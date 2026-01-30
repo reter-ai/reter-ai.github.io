@@ -3,13 +3,13 @@ layout: page
 title: About
 ---
 
-# About Codeine
+# About Reter Code
 
 AI-powered code reasoning MCP server.
 
 ## What It Does
 
-Codeine gives Claude Code access to:
+Reter Code gives Claude Code access to:
 
 - **Logical Reasoning** - RETER engine for code understanding
 - **Multi-Language Analysis** - Python, C#, C++, JavaScript
@@ -46,7 +46,7 @@ Codeine gives Claude Code access to:
 
 ## Open Source
 
-Codeine is open source under the MIT License.
+Reter Code is open source under the MIT License.
 
-- [GitHub Repository](https://github.com/codeine-ai/codeine)
-- [Issue Tracker](https://github.com/codeine-ai/codeine/issues)
+- [GitHub Repository](https://github.com/reter-ai/reter_code)
+- [Issue Tracker](https://github.com/reter-ai/reter_code/issues)

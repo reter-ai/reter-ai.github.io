@@ -5,7 +5,7 @@ title: Features
 
 # Tools
 
-Codeine provides MCP tools for code reasoning and analysis.
+Reter Code provides MCP tools for code reasoning and analysis.
 
 ## Thinking & Reasoning
 
