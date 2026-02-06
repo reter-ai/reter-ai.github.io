@@ -13,19 +13,11 @@ Reter Code runs as **two separate processes** connected via ZeroMQ: a stateful R
 - Claude Code (CLI or Desktop)
 - uv/uvx package manager
 
-## Quick Install
+## Quick Start
 
-### Step 1: Install
+### Step 1: Start the RETER Server
 
-```bash
-uvx --from git+https://github.com/reter-ai/reter_code --find-links https://raw.githubusercontent.com/reter-ai/reter/main/reter_core/index.html reter_code
-```
-
-This installs everything and prints setup instructions.
-
-### Step 2: Start the RETER Server
-
-Open a **separate terminal**, `cd` to your project, and start the server:
+Open a terminal, `cd` to your project, and start the server:
 
 ```bash
 cd /path/to/your/project
@@ -56,7 +48,7 @@ The server will:
 | `--no-console` | Disable rich console UI |
 | `--verbose, -v` | Enable debug logging |
 
-### Step 3: Add MCP Client to Claude Code
+### Step 2: Add MCP Client to Claude Code
 
 ```bash
 claude mcp add reter -- uvx --from git+https://github.com/reter-ai/reter_code --find-links https://raw.githubusercontent.com/reter-ai/reter/main/reter_core/index.html reter_code --stdio
