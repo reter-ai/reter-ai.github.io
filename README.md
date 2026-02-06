@@ -1,10 +1,10 @@
 # Reter Code Website
 
-GitHub Pages website for [reter_code.ai](https://reter_code.ai)
+GitHub Pages website for [reter.ai](https://reter.ai)
 
 ## Setup
 
-This repository should be named `reter_code-ai.github.io` on GitHub for automatic GitHub Pages deployment.
+This repository should be named `reter-ai.github.io` on GitHub for automatic GitHub Pages deployment.
 
 ## Local Development
 
@@ -23,14 +23,14 @@ This repository should be named `reter_code-ai.github.io` on GitHub for automati
 
 The site is automatically deployed to GitHub Pages when changes are pushed to the main branch.
 
-To use a custom domain (reter_code.ai):
-1. Add a `CNAME` file with `reter_code.ai`
+To use a custom domain (reter.ai):
+1. Add a `CNAME` file with `reter.ai`
 2. Configure DNS to point to GitHub Pages
 
 ## Structure
 
 ```
-reter_code-ai.github.io/
+reter-ai.github.io/
 ├── _config.yml          # Jekyll configuration
 ├── _layouts/            # HTML layout templates
 │   ├── home.html        # Homepage layout
