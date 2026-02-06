@@ -1,6 +1,6 @@
 # Site settings
 title: Reter Code
-description: "AI-powered code reasoning MCP server for Claude Code"
+description: "Architectural visibility for AI coding agents. Code ontology and refactoring pipeline via MCP."
 baseurl: ""
 url: "https://reter.ai"
 
