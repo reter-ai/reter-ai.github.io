@@ -18,7 +18,7 @@ The primary workflow tools for detecting and reducing code redundancy.
 | `generate_cadsl` | Generate CADSL queries from natural language without executing them |
 | `reql` | Execute REQL queries directly against the knowledge graph |
 | `semantic_search` | Find semantically similar code using FAISS vector similarity |
-| `code_inspection` | Multi-language code analysis (Python, JS, C#, C++) |
+| `code_inspection` | Multi-language code analysis (15 languages) |
 | `recommender` | Refactoring and redundancy reduction recommendations |
 
 ### execute_cadsl
@@ -88,7 +88,7 @@ semantic_search("database connection", file_filter="src/db/**")
 
 ### code_inspection
 
-Multi-language code analysis for Python, JavaScript, C#, and C++.
+Multi-language code analysis across 15 languages.
 
 Available actions include:
 - `list_modules` - List all modules
@@ -221,6 +221,17 @@ These annotations enable architectural queries — find all stateful classes, ma
 | Language | Extensions | Status |
 |----------|-----------|--------|
 | Python | `.py` | Full support |
+| JavaScript | `.js`, `.mjs`, `.jsx`, `.ts`, `.tsx` | Full support |
+| Java | `.java` | Full support |
 | C# | `.cs` | Full support |
-| C++ | `.cpp`, `.hpp`, `.h`, `.cc` | Full support |
-| JavaScript | `.js` | Full support |
+| C++ | `.cpp`, `.cc`, `.cxx`, `.hpp`, `.h` | Full support |
+| Go | `.go` | Full support |
+| Rust | `.rs` | Full support |
+| Swift | `.swift` | Full support |
+| Scala | `.scala`, `.sc` | Full support |
+| PHP | `.php` | Full support |
+| Haskell | `.hs`, `.lhs` | Full support |
+| Erlang | `.erl`, `.hrl` | Full support |
+| Objective-C | `.m`, `.mm` | Full support |
+| Visual Basic 6 | `.bas`, `.cls`, `.frm` | Full support |
+| HTML | `.html`, `.htm` | Full support |

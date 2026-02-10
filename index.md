@@ -68,7 +68,7 @@ title: Home
     <div class="stat-label">OWL 2 RL Rules</div>
   </div>
   <div class="stat-item">
-    <div class="stat-number">4+</div>
+    <div class="stat-number">15</div>
     <div class="stat-label">Languages</div>
   </div>
   <div class="stat-item">
@@ -164,7 +164,7 @@ title: Home
     <div class="feature-card-modern">
       <div class="feature-icon"><i class="fa-solid fa-code"></i></div>
       <h3>code_inspection</h3>
-      <p>Multi-language code analysis for Python, JavaScript, C#, and C++. List classes, find callers, analyze dependencies, get complexity metrics.</p>
+      <p>Multi-language code analysis across 15 languages including Python, Java, C#, C++, Go, Rust, Swift, and more. List classes, find callers, analyze dependencies, get complexity metrics.</p>
     </div>
 
     <div class="feature-card-modern">
