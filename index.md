@@ -7,18 +7,16 @@ title: Home
   <p>MCP Server for Claude Code and Claude Desktop</p>
 </div>
 
-<div class="hero-modern">
-  <div class="hero-content-modern">
+<div class="hero-modern hero-stacked">
+  <div class="hero-content-modern hero-content-centered">
     <div class="badge">Code Ontology | CADSL Pipelines | RAG + ML</div>
     <h1 class="hero-title-modern">
-      <span class="gradient-text">Architectural</span><br>
-      <span class="gradient-text-alt">Visibility</span>
-      for AI Agents
+      Turn Vibe Coding into<br>
+      <span class="gradient-text">AI Aided Software Engineering</span>
     </h1>
     <p class="hero-subtitle-modern">
-      The name comes from the <strong>RETE algorithm</strong> &mdash; the forward-chaining pattern matching engine at its core.
-      RETER <em>RETEs your code</em>: it feeds source files through a RETE network of 70+ OWL 2 RL inference rules
-      and what comes out the other end is a formal code ontology.
+      Your AI agent writes code. RETER makes sure it follows your architecture, design patterns, and security boundaries.<br>
+      A <strong>code ontology</strong> with 70+ inference rules, semantic search, and 130 analysis pipelines &mdash; exposed as an <strong>MCP server</strong> for Claude Code, Claude Desktop, or any MCP client.
     </p>
     <div class="hero-buttons-modern">
       <a href="/docs/getting-started" class="btn-modern btn-primary-modern">Get Started</a>
@@ -33,27 +31,102 @@ title: Home
       <p>Code Ontology | 130 CADSL Pipelines | RAG Embeddings | Refactoring Workflow</p>
     </div>
   </div>
-  <div class="hero-visual">
-    <div class="code-preview">
-      <div class="code-header">
-        <span class="code-dot"></span>
-        <span class="code-dot"></span>
-        <span class="code-dot"></span>
+
+  <div class="terminals-grid">
+    <div class="terminal-column">
+      <div class="use-case-label" style="text-align:center; margin-bottom:0.75rem;">RETER SERVER</div>
+      <div class="code-preview rich-console">
+        <div class="code-header">
+          <span class="code-dot"></span>
+          <span class="code-dot"></span>
+          <span class="code-dot"></span>
+          <span class="code-header-title">reter</span>
+        </div>
+        <div class="console-body">
+          <div class="console-title-bar">
+            <span class="ct-name">RETER Server</span> <span class="ct-version">v0.1.3</span>&nbsp;&nbsp;<span class="ct-addr">[tcp://127.0.0.1:5555]</span>
+          </div>
+          <div class="console-panels">
+            <div class="console-panel panel-blue">
+              <div class="panel-label panel-label-blue">Status</div>
+              <div class="panel-content">
+                <div class="panel-row"><span class="pl">Uptime</span><span class="pv-cyan">4h 4m</span></div>
+                <div class="panel-row"><span class="pl">Sources</span><span class="pv-green">3,346</span></div>
+                <div class="panel-row"><span class="pl">Facts</span><span class="pv-green">1,374,937</span></div>
+                <div class="panel-row"><span class="pl">Vectors</span><span class="pv-green">15,497</span></div>
+                <div class="panel-spacer"></div>
+                <div class="panel-row"><span class="pl">Queries</span><span class="pv">10</span></div>
+                <div class="panel-row"><span class="pl">Errors</span><span class="pv">0</span></div>
+                <div class="panel-row"><span class="pl">Avg Time</span><span class="pv-green">135ms</span></div>
+              </div>
+            </div>
+            <div class="console-panel panel-blue">
+              <div class="panel-label panel-label-blue">Query Log</div>
+              <div class="panel-content">
+                <div class="panel-row qlog-header"><span class="ql-time">Time</span><span class="ql-method">Method</span><span class="ql-results">Results</span><span class="ql-dur">Time</span></div>
+                <div class="panel-row"><span class="ql-time pv-cyan">19:21:07</span><span class="ql-method pv">system</span><span class="ql-results pv">0</span><span class="ql-dur pv-green">32ms</span></div>
+                <div class="panel-row"><span class="ql-time pv-cyan">19:21:09</span><span class="ql-method pv">reql</span><span class="ql-results pv">47</span><span class="ql-dur pv-green">18ms</span></div>
+                <div class="panel-row"><span class="ql-time pv-cyan">19:21:12</span><span class="ql-method pv">cadsl</span><span class="ql-results pv">12</span><span class="ql-dur pv-green">340ms</span></div>
+                <div class="panel-row"><span class="ql-time pv-cyan">19:21:15</span><span class="ql-method pv">cadsl</span><span class="ql-results pv">8</span><span class="ql-dur pv-green">285ms</span></div>
+                <div class="panel-row"><span class="ql-time pv-cyan">19:21:18</span><span class="ql-method pv">diagram</span><span class="ql-results pv">1</span><span class="ql-dur pv-green">92ms</span></div>
+                <div class="panel-row"><span class="ql-time pv-cyan">19:21:20</span><span class="ql-method pv">reql</span><span class="ql-results pv">23</span><span class="ql-dur pv-green">11ms</span></div>
+                <div class="panel-row"><span class="ql-time pv-cyan">19:21:24</span><span class="ql-method pv">cadsl</span><span class="ql-results pv">42</span><span class="ql-dur pv-yellow">1.2s</span></div>
+                <div class="panel-row"><span class="ql-time pv-cyan">19:21:31</span><span class="ql-method pv">nlq</span><span class="ql-results pv">5</span><span class="ql-dur pv-green">480ms</span></div>
+                <div class="panel-row"><span class="ql-time pv-cyan">19:21:33</span><span class="ql-method pv">diagram</span><span class="ql-results pv">1</span><span class="ql-dur pv-green">92ms</span></div>
+                <div class="panel-row"><span class="ql-time pv-cyan">19:21:35</span><span class="ql-method pv">search</span><span class="ql-results pv">15</span><span class="ql-dur pv-green">64ms</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="console-panel panel-yellow panel-full">
+            <div class="panel-label panel-label-yellow">Progress</div>
+            <div class="panel-content">
+              <span class="pv-green">Ready</span> <span class="pv-dim">&mdash; Server is idle, waiting for queries</span>
+              <div style="margin-top:0.4rem"><span class="pv-dim">Add MCP to Claude Code:</span></div>
+              <div><span class="pv-white">claude mcp add reter -- reter_code</span></div>
+            </div>
+          </div>
+          <div class="console-footer">
+            <span class="key-tag">[K]</span><span class="key-label">ompact</span>
+            <span class="key-tag">[D]</span><span class="key-label">ebug log</span>
+            <span class="key-tag">[N]</span><span class="key-label">lq log</span>
+            <span class="key-tag">[S]</span><span class="key-label">ources</span>
+            <span class="key-tag">[Ctrl+C]</span><span class="key-label"> Exit</span>
+          </div>
+        </div>
       </div>
-      <pre><code><span class="code-comment"># Terminal 1: Start the RETER server</span>
-<span class="code-comment">$</span> <span class="code-keyword">reter_server</span> <span class="code-string">--project /my/project</span>
-  ✓ RETE network initialized
-  ✓ 234 sources loaded into ontology
-  ✓ RAG embeddings built (FAISS)
-  ✓ ZeroMQ bound on tcp://127.0.0.1:5555
+      <p class="terminal-caption">Stateful server: holds the RETE network, code ontology, and RAG embeddings. Stays alive across Claude sessions.</p>
+    </div>
 
-<span class="code-comment"># Terminal 2: Use Claude as usual</span>
-<span class="code-comment">$</span> <span class="code-keyword">claude</span>
-<span class="code-comment">&gt;</span> Find redundant code across the codebase
+    <div class="terminal-column">
+      <div class="use-case-label" style="text-align:center; margin-bottom:0.75rem;">CLAUDE + MCP TOOLS</div>
+      <div class="code-preview">
+        <div class="code-header">
+          <span class="code-dot"></span>
+          <span class="code-dot"></span>
+          <span class="code-dot"></span>
+          <span class="code-header-title">claude</span>
+        </div>
+        <pre><code><span class="code-function">● reter &ndash; system</span> <span class="code-comment">(MCP)</span><span class="code-string"> action: "status"</span>
 
-<span class="code-function">● reter:execute_cadsl</span>
-  <span class="code-string">script="redundant_code_tasks.cadsl"</span>
-  Created 42 review tasks</code></pre>
+● RETER is live with <span class="code-keyword">3,346</span> sources, <span class="code-keyword">9,937</span> WMEs, and <span class="code-keyword">15,497</span> RAG vectors. Let me start a fresh session and run all 8 detectors.
+
+<span class="code-function">● reter &ndash; session</span> <span class="code-comment">(MCP)</span>
+  <span class="code-string">action: "start", goal: "OpenClaw security audit"</span>
+
+<span class="code-function">● reter &ndash; execute_cadsl</span> <span class="code-comment">(MCP)</span> <span class="code-comment">&times;8</span>
+  <span class="code-string">script: "god_class_detector.cadsl"</span>
+  <span class="code-string">script: "dead_code_detector.cadsl"</span>
+  <span class="code-string">script: "complex_gateway.cadsl"</span>
+  <span class="code-comment">... +5 more running in parallel</span>
+
+<span class="code-function">● reter &ndash; natural_language_query</span> <span class="code-comment">(MCP)</span>
+  <span class="code-string">"Find classes that handle both network I/O and crypto operations"</span>
+
+<span class="code-function">● reter &ndash; diagram</span> <span class="code-comment">(MCP)</span><span class="code-string"> type: "class", filter: "security"</span>
+
+● Found <span class="code-keyword">23</span> issues across <span class="code-keyword">8</span> detectors. Created <span class="code-keyword">42</span> review tasks.</code></pre>
+      </div>
+      <p class="terminal-caption">AI agent calls MCP tools to query the ontology, run CADSL pipelines, and create refactoring tasks.</p>
     </div>
   </div>
 </div>
@@ -240,7 +313,7 @@ title: Home
   <div class="use-cases-grid">
     <div class="use-case-card">
       <div class="use-case-label">RETER SERVER</div>
-      <h3>reter_server</h3>
+      <h3>reter</h3>
       <p>Runs in a separate terminal. Holds the RETE network, builds the code ontology, indexes RAG embeddings, and processes all queries. Stays alive across Claude sessions.</p>
     </div>
 
