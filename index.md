@@ -129,6 +129,98 @@ title: Home
       <p class="terminal-caption">AI agent calls MCP tools to query the ontology, run CADSL pipelines, and create refactoring tasks.</p>
     </div>
   </div>
+
+  <div class="view-row" id="reter-view">
+    <div class="use-case-label" style="text-align:center; margin-bottom:0.75rem;">RETER VIEW</div>
+    <div class="code-preview browser-window">
+      <div class="browser-chrome">
+        <div class="browser-dots">
+          <span class="code-dot"></span>
+          <span class="code-dot"></span>
+          <span class="code-dot"></span>
+        </div>
+        <div class="browser-address-bar">
+          <span class="browser-lock">&#x1f512;</span>
+          <span class="browser-url">127.0.0.1:61151</span>
+        </div>
+      </div>
+      <div class="view-body">
+        <div class="view-header-bar">
+          <div class="view-header-left">
+            <span class="view-hamburger">&#9776;</span>
+            <span class="view-logo">RETER</span>
+            <span class="view-label-text">View</span>
+          </div>
+          <div class="view-header-right">
+            <span class="view-badge-ok">connected</span>
+            <span class="view-theme-btn">&#9789;</span>
+          </div>
+        </div>
+        <div class="view-main">
+          <div class="view-sidebar">
+            <div class="view-sidebar-header">HISTORY</div>
+            <div class="view-history-item view-history-active">
+              <div class="view-hi-top"><span class="view-hi-time">5m ago</span><span class="view-hi-type">MARKDOWN</span></div>
+              <div class="view-hi-title">Security &mdash; Attack Chain Diag...</div>
+              <div class="view-hi-actions"><span class="view-hi-save">Save</span></div>
+            </div>
+            <div class="view-history-item">
+              <div class="view-hi-top"><span class="view-hi-time">12m ago</span><span class="view-hi-type">MARKDOWN</span></div>
+              <div class="view-hi-title">Architecture &mdash; Security Findi...</div>
+              <div class="view-hi-actions"><span class="view-hi-save">Save</span></div>
+            </div>
+            <div class="view-history-item">
+              <div class="view-hi-top"><span class="view-hi-time">1h ago</span><span class="view-hi-type">MERMAID</span></div>
+              <div class="view-hi-title">Class Diagram &mdash; Auth Module</div>
+              <div class="view-hi-actions"><span class="view-hi-save">Save</span></div>
+            </div>
+          </div>
+          <div class="view-splitter"></div>
+          <div class="view-content">
+            <h3 class="view-md-h1">Security &mdash; Attack Chain Diagrams</h3>
+            <p class="view-md-h2">1. Webhook Forgery Attack Sequence</p>
+            <div class="view-diagram-box">
+              <div class="view-diagram-toolbar"><span class="view-tb-btn">+</span><span class="view-tb-btn">&minus;</span><span class="view-tb-zoom">100%</span><span class="view-tb-btn">&#8634;</span></div>
+              <div class="view-sequence">
+                <div class="view-seq-participants">
+                  <div class="view-seq-p">Attacker</div>
+                  <div class="view-seq-p">Reverse Proxy</div>
+                  <div class="view-seq-p">Server</div>
+                  <div class="view-seq-p">webhook-security.ts</div>
+                </div>
+                <div class="view-seq-body" style="position:relative">
+                  <div style="position:absolute;top:0;bottom:0;left:0;right:0;display:flex;gap:0.5rem;justify-content:space-between;pointer-events:none;z-index:0">
+                    <div style="flex:1;display:flex;justify-content:center"><div style="width:2px;height:100%;background:repeating-linear-gradient(to bottom,#475569 0 4px,transparent 4px 8px)"></div></div>
+                    <div style="flex:1;display:flex;justify-content:center"><div style="width:2px;height:100%;background:repeating-linear-gradient(to bottom,#475569 0 4px,transparent 4px 8px)"></div></div>
+                    <div style="flex:1;display:flex;justify-content:center"><div style="width:2px;height:100%;background:repeating-linear-gradient(to bottom,#475569 0 4px,transparent 4px 8px)"></div></div>
+                    <div style="flex:1;display:flex;justify-content:center"><div style="width:2px;height:100%;background:repeating-linear-gradient(to bottom,#475569 0 4px,transparent 4px 8px)"></div></div>
+                  </div>
+                  <div class="view-seq-arrows" style="position:relative;z-index:1">
+                    <div class="view-seq-row" style="margin-left:12.5%;width:25%">
+                      <span class="view-seq-label">POST /webhook<br>X-Forwarded-Host: attacker.com</span>
+                      <div class="view-seq-arrow" style="width:100%"></div>
+                    </div>
+                    <div class="view-seq-row" style="margin-left:37.5%;width:25%">
+                      <span class="view-seq-label">Forward with headers</span>
+                      <div class="view-seq-arrow" style="width:100%"></div>
+                    </div>
+                    <div class="view-seq-row" style="margin-left:62.5%;width:25%">
+                      <span class="view-seq-label">verifyTwilioWebhook(req)</span>
+                      <div class="view-seq-arrow" style="width:100%"></div>
+                    </div>
+                    <div class="view-seq-note">
+                      <span class="view-note-yellow">URL = attacker.com/webhook<br>instead of real-server.com</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="terminal-caption">Live browser view: markdown and mermaid diagrams pushed via WebSocket. History sidebar with SQLite persistence and file export.</p>
+  </div>
 </div>
 
 <div class="stats-section">
@@ -245,6 +337,12 @@ title: Home
       <h3>recommender</h3>
       <p>Generate refactoring and redundancy reduction recommendations. Test coverage analysis and extraction opportunities.</p>
     </div>
+
+    <div class="feature-card-modern">
+      <div class="feature-icon"><i class="fa-solid fa-display"></i></div>
+      <h3>view</h3>
+      <p>Push markdown, Mermaid diagrams, and HTML to a live browser window. Real-time visualization via WebSocket with persistent history.</p>
+    </div>
   </div>
 </div>
 
@@ -304,7 +402,7 @@ title: Home
   </div>
 </div>
 
-<div class="section-light">
+<div class="section-light" id="architecture">
   <div class="section-header">
     <span class="section-badge">Architecture</span>
     <h2>Two Processes,<br><span class="gradient-text">Connected by ZeroMQ</span></h2>
@@ -327,6 +425,57 @@ title: Home
       <div class="use-case-label">MCP CLIENT</div>
       <h3>reter_code</h3>
       <p>Stateless FastMCP proxy that runs inside Claude. Registers MCP tools and forwards every request to the RETER server. Lightweight, no local state.</p>
+    </div>
+
+    <div class="use-case-card">
+      <div class="use-case-label">RETER VIEW</div>
+      <h3>Browser UI</h3>
+      <p>HTTP + WebSocket server running as a daemon thread inside RETER Server. Pushes markdown and Mermaid diagrams to your browser in real time. SQLite-backed history with file export.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-dark" id="view-section">
+  <div class="section-header">
+    <span class="section-badge">RETER View</span>
+    <h2>Live Visualization<br><span class="gradient-text">in Your Browser</span></h2>
+  </div>
+
+  <div class="features-grid-modern">
+    <div class="feature-card-modern">
+      <div class="feature-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+      <h3>WebSocket Push</h3>
+      <p>Diagrams and markdown are pushed to your browser in real time as Claude generates them. No polling, no refresh &mdash; content appears instantly via WebSocket.</p>
+    </div>
+
+    <div class="feature-card-modern">
+      <div class="feature-icon"><i class="fa-solid fa-diagram-project"></i></div>
+      <h3>Mermaid Diagrams</h3>
+      <p>Renders all Mermaid diagram types: flowchart, sequence, class, state, ER, gantt, pie, and block-beta. Interactive zoom, pan, and reset controls built in.</p>
+    </div>
+
+    <div class="feature-card-modern">
+      <div class="feature-icon"><i class="fa-solid fa-file-lines"></i></div>
+      <h3>Rich Markdown</h3>
+      <p>Full GitHub-flavored markdown with code highlighting, tables, and blockquotes. Mermaid code blocks in markdown are auto-detected and rendered as interactive diagrams.</p>
+    </div>
+
+    <div class="feature-card-modern">
+      <div class="feature-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+      <h3>Persistent History</h3>
+      <p>Every pushed visualization is stored in SQLite. Browse, search, and reload past diagrams from the sidebar &mdash; even after server restarts.</p>
+    </div>
+
+    <div class="feature-card-modern">
+      <div class="feature-icon"><i class="fa-solid fa-floppy-disk"></i></div>
+      <h3>Export to Files</h3>
+      <p>Save any visualization to disk with one click. Markdown exports as <code>.md</code>, Mermaid as <code>.mmd</code>. Saved files open with your system default editor.</p>
+    </div>
+
+    <div class="feature-card-modern">
+      <div class="feature-icon"><i class="fa-solid fa-circle-half-stroke"></i></div>
+      <h3>Light &amp; Dark Themes</h3>
+      <p>Switch between light and dark modes with one click. Theme persists across sessions and Mermaid diagrams re-render to match. Resizable sidebar with collapsible layout.</p>
     </div>
   </div>
 </div>

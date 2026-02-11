@@ -559,6 +559,343 @@ body {
   margin-right: 0.75rem;
 }
 
+/* ===== RETER View (browser window) ===== */
+.view-row {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  padding: 0 2rem;
+}
+
+.browser-window {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.browser-chrome {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #273548;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #334155;
+}
+
+.browser-dots {
+  display: flex;
+  gap: 0.375rem;
+}
+
+.browser-address-bar {
+  flex: 1;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 0.375rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.browser-lock { font-size: 0.625rem; }
+.browser-url { font-family: 'JetBrains Mono', monospace; }
+
+.view-body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.8125rem;
+  color: #e2e8f0;
+}
+
+.view-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #334155;
+  background: #273548;
+}
+
+.view-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.view-hamburger {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #334155;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.view-logo {
+  font-weight: 800;
+  font-size: 0.8125rem;
+  color: #e2e8f0;
+  letter-spacing: 0.05em;
+}
+
+.view-label-text {
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.view-header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.view-badge-ok {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  padding: 0.125rem 0.5rem;
+  border-radius: 2em;
+  background: #0f2d1c;
+  color: #3fb950;
+  border: 1px solid #238636;
+}
+
+.view-theme-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #334155;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.view-main {
+  display: flex;
+  min-height: 220px;
+}
+
+.view-sidebar {
+  width: 190px;
+  flex-shrink: 0;
+  border-right: 1px solid #334155;
+  background: #273548;
+  padding: 0;
+  overflow: hidden;
+}
+
+.view-sidebar-header {
+  font-weight: 600;
+  font-size: 0.6875rem;
+  color: #94a3b8;
+  padding: 0.5rem 0.75rem 0.375rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.view-history-item {
+  padding: 0.375rem 0.625rem;
+  margin: 0 0.375rem;
+  border-radius: 0.375rem;
+  cursor: default;
+}
+
+.view-history-item:hover, .view-history-active {
+  background: rgba(148, 163, 184, 0.15);
+}
+
+.view-hi-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.375rem;
+}
+
+.view-hi-time {
+  font-size: 0.625rem;
+  color: #94a3b8;
+}
+
+.view-hi-type {
+  font-size: 0.5625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.0625rem 0.3rem;
+  border-radius: 0.1875rem;
+  background: rgba(148, 163, 184, 0.15);
+  color: #94a3b8;
+}
+
+.view-hi-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.view-hi-actions {
+  margin-top: 0.125rem;
+}
+
+.view-hi-save {
+  font-size: 0.625rem;
+  font-weight: 500;
+  padding: 0.0625rem 0.375rem;
+  border: 1px solid #334155;
+  border-radius: 0.25rem;
+  color: #94a3b8;
+  background: #334155;
+}
+
+.view-splitter {
+  width: 3px;
+  flex-shrink: 0;
+  background: #334155;
+  cursor: col-resize;
+}
+
+.view-content {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  overflow: hidden;
+}
+
+.view-md-h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #334155;
+  margin: 0 0 0.75rem;
+}
+
+.view-md-h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin: 0 0 0.75rem;
+}
+
+.view-diagram-box {
+  position: relative;
+  border: 1px solid #334155;
+  border-radius: 0.375rem;
+  background: #273548;
+  overflow: hidden;
+}
+
+.view-diagram-toolbar {
+  position: absolute;
+  top: 0.375rem;
+  right: 0.375rem;
+  display: flex;
+  gap: 0.1875rem;
+  z-index: 1;
+}
+
+.view-tb-btn {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid #334155;
+  border-radius: 0.1875rem;
+  background: #334155;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
+.view-tb-zoom {
+  font-size: 0.5625rem;
+  font-weight: 500;
+  color: #94a3b8;
+  padding: 0 0.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.view-sequence {
+  padding: 1rem;
+}
+
+.view-seq-participants {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.view-seq-p {
+  background: #2d1f3d;
+  border: 1px solid #553d73;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  text-align: center;
+  flex: 1;
+}
+
+.view-seq-arrows {
+  position: relative;
+}
+
+.view-seq-row {
+  margin-bottom: 0.5rem;
+}
+
+.view-seq-label {
+  display: block;
+  font-size: 0.625rem;
+  color: #e2e8f0;
+  margin-bottom: 0.125rem;
+  text-align: center;
+}
+
+.view-seq-arrow {
+  height: 2px;
+  background: #e2e8f0;
+  position: relative;
+}
+
+.view-seq-arrow::after {
+  content: '';
+  position: absolute;
+  right: -1px;
+  top: -3px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid #e2e8f0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+.view-seq-note {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.view-note-yellow {
+  display: inline-block;
+  background: #3d2e00;
+  border: 1px solid #9e6a03;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.625rem;
+  color: #f0c040;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .terminals-grid {
     grid-template-columns: 1fr;
@@ -566,6 +903,12 @@ body {
   }
   .console-panels {
     grid-template-columns: 1fr;
+  }
+  .view-row {
+    padding: 0 1rem;
+  }
+  .view-sidebar {
+    width: 140px;
   }
 }
 
