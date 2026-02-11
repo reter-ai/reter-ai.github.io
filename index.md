@@ -44,7 +44,7 @@ title: Home
         </div>
         <div class="console-body">
           <div class="console-title-bar">
-            <span class="ct-name">RETER Server</span> <span class="ct-version">v0.1.3</span>&nbsp;&nbsp;<span class="ct-addr">[tcp://127.0.0.1:5555]</span>
+            <span class="ct-name">RETER Server</span> <span class="ct-version">v0.1.3</span>&nbsp;&nbsp;<span class="ct-addr">[tcp://127.0.0.1:5555]</span>&nbsp;&nbsp;<span class="ct-view">[http://127.0.0.1:61151]</span>
           </div>
           <div class="console-panels">
             <div class="console-panel panel-blue">
@@ -81,6 +81,7 @@ title: Home
             <div class="panel-label panel-label-yellow">Progress</div>
             <div class="panel-content">
               <span class="pv-green">Ready</span> <span class="pv-dim">&mdash; Server is idle, waiting for queries</span>
+              <div style="margin-top:0.4rem"><span class="pv-dim">Browser: </span><span class="pv-magenta">http://127.0.0.1:61151</span></div>
               <div style="margin-top:0.4rem"><span class="pv-dim">Add MCP to Claude Code:</span></div>
               <div><span class="pv-white">claude mcp add reter -- reter_code</span></div>
             </div>

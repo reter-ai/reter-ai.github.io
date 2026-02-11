@@ -480,6 +480,7 @@ body {
 .ct-name { color: #34d399; font-weight: 700; }
 .ct-version { color: #fbbf24; }
 .ct-addr { color: #67e8f9; }
+.ct-view { color: #c084fc; }
 
 .console-panels {
   display: grid;
@@ -539,6 +540,7 @@ body {
 .ql-dur { width: 17%; text-align: right; }
 
 .pv-white { color: #ffffff; font-weight: 600; }
+.pv-magenta { color: #c084fc; font-weight: 600; text-decoration: underline; }
 .pv-yellow { color: #fbbf24; }
 
 .console-footer {
