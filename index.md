@@ -481,6 +481,37 @@ title: Home
   </div>
 </div>
 
+<div class="section-light" id="contact">
+  <div class="section-header">
+    <span class="section-badge">Contact</span>
+    <h2>Get in <span class="gradient-text">Touch</span></h2>
+  </div>
+  <div class="contact-form-wrapper">
+    <form action="https://formspree.io/f/xzdadwog" method="POST" class="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="_replyto" required placeholder="your@email.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required placeholder="What is this about?">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+      </div>
+      <input type="hidden" name="_subject" value="RETER Contact Form">
+      <button type="submit" class="btn-modern btn-primary-modern">Send Message</button>
+    </form>
+  </div>
+</div>
+
 <div class="cta-modern">
   <h2>Give your AI agent<br>architectural visibility.</h2>
   <p>Install the Reter Code MCP server. Build a code ontology. Stop the spaghetti.</p>
