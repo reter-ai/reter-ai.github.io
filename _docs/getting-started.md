@@ -9,9 +9,77 @@ Reter Code runs as **two separate processes** connected via ZeroMQ: a stateful R
 
 ## Prerequisites
 
-- Python 3.10 or higher
-- Claude Code (CLI or Desktop)
-- uv/uvx package manager
+All platforms require:
+- [**uv**](https://docs.astral.sh/uv/) — fast Python package manager
+- [**git**](https://git-scm.com/) — required to fetch packages from GitHub
+- **Claude Code** (CLI or Desktop)
+
+### Python version
+
+| Platform | Supported Python |
+|----------|-----------------|
+| Windows (x64) | 3.10 – 3.14 |
+| Windows (WSL2) | 3.10 – 3.14 |
+| macOS (Apple Silicon) | 3.10 – 3.14 |
+| macOS (Intel x86_64) | 3.11 – 3.12 |
+| Linux (x64) | 3.10 – 3.14 |
+
+> **macOS Intel note:** PyTorch dropped x86_64 macOS support in 2.5+, and older versions don't have Python 3.13 wheels. Use `--python 3.12` when installing with uv.
+
+### Windows
+
+Install with [Chocolatey](https://chocolatey.org/install):
+
+```powershell
+choco install uv git vcredist140
+```
+
+Or install manually:
+- **uv** — `powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"`
+- **git** — download from [git-scm.com/download/win](https://git-scm.com/download/win)
+- **VC++ Redistributable** — download from [aka.ms/vs/17/release/vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
+> The VC++ Redistributable is required by PyTorch (used for code embeddings). Without it you'll get a `c10.dll` error on startup.
+
+### Windows (WSL2)
+
+Works the same as native Linux. Inside your WSL2 terminal:
+
+```bash
+# uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# git (Ubuntu/Debian — default WSL distro)
+sudo apt update && sudo apt install git
+```
+
+### macOS
+
+```bash
+brew install uv git
+```
+
+Or without Homebrew:
+
+```bash
+# uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+# git — included with Xcode Command Line Tools
+xcode-select --install
+```
+
+### Linux
+
+```bash
+# uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# git (Debian/Ubuntu)
+sudo apt install git
+
+# git (Fedora/RHEL)
+sudo dnf install git
+```
 
 ## Quick Start
 
@@ -20,8 +88,24 @@ Reter Code runs as **two separate processes** connected via ZeroMQ: a stateful R
 Install once — commands stay available:
 
 ```bash
-uv tool install --from git+https://github.com/reter-ai/reter_code --find-links https://raw.githubusercontent.com/reter-ai/reter/main/reter_core/index.html reter_code
+uv tool install --from git+https://github.com/reter-ai/reter_code \
+  --find-links https://raw.githubusercontent.com/reter-ai/reter/main/reter_core/index.html \
+  reter_code
 ```
+
+**macOS Intel (x86_64)** — add `--python 3.12` to avoid PyTorch resolution failures:
+
+```bash
+uv tool install --python 3.12 \
+  --from git+https://github.com/reter-ai/reter_code \
+  --find-links https://raw.githubusercontent.com/reter-ai/reter/main/reter_core/index.html \
+  reter_code
+```
+
+> **Troubleshooting:**
+> - **swig/cmake errors** — `uv` is building `faiss-cpu` or `pyarrow` from source. Add `--no-build-package faiss-cpu --no-build-package pyarrow` to force pre-built wheels.
+> - **`c10.dll` not found (Windows)** — Install the VC++ Redistributable (see [Prerequisites](#windows)) and restart your terminal.
+> - **torch resolution error (macOS Intel)** — PyTorch has no wheels for x86_64 macOS + Python 3.13. Use `--python 3.12`.
 
 Then start the server and add MCP:
 
@@ -40,11 +124,16 @@ Run directly without installing — uvx creates a temporary environment each tim
 
 ```bash
 cd /path/to/your/project
-uvx --from git+https://github.com/reter-ai/reter_code --find-links https://raw.githubusercontent.com/reter-ai/reter/main/reter_core/index.html reter
+uvx --from git+https://github.com/reter-ai/reter_code \
+  --find-links https://raw.githubusercontent.com/reter-ai/reter/main/reter_core/index.html \
+  reter
 ```
 
 ```bash
-claude mcp add reter -e RETER_PROJECT_ROOT=/path/to/your/project -- uvx --from git+https://github.com/reter-ai/reter_code --find-links https://raw.githubusercontent.com/reter-ai/reter/main/reter_core/index.html reter_code --stdio
+claude mcp add reter -- uvx \
+  --from git+https://github.com/reter-ai/reter_code \
+  --find-links https://raw.githubusercontent.com/reter-ai/reter/main/reter_core/index.html \
+  reter_code --stdio
 ```
 
 ### What Happens
