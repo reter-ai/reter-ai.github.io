@@ -1,0 +1,43 @@
+# Site settings
+title: Reter Code
+description: "Make AI-generated code secure by design. Symbolic intelligence, security audit, and code ontology via MCP."
+baseurl: ""
+url: "https://reter.ai"
+
+# Build settings
+markdown: kramdown
+theme: minima
+permalink: pretty
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "doc"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Navigation
+header_pages:
+  - index.md
+  - about.md
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
